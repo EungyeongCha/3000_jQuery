@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이벤트효과실습5</title>
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#wrap>p').hide();
+            $('#wrap>h2>a').click(function() {
+                $('#wrap>p').hide();
+                $(this).parent().next().show();
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="wrap">
+        <h2>
+            <a href="#">버튼1</a>
+        </h2>
+        <p>내용1</p>
+        <h2>
+            <a href="#">버튼2</a>
+        </h2>
+        <p>탑다운원리 / 이벤트원리</p>
+    </div>
+</body></html>

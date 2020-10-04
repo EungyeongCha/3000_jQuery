@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>제이쿼리선택자</title>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            /*1. 전체선택자*/
+            $("*").css("color", "red");
+            /*2. 요소명 선택자*/
+            $("h3").css("color", "green");
+            /*3. 클래스 선택자*/
+            $(".author").css("color", "blue");
+            /*4. 아이디 선택자*/
+            $("#txt1").css("color", "#000");
+            $("#txt2").css({"color":"silver", "background-color": "black"});
+        });
+    </script>
+</head>
+<body>
+<h3 id="txt1">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, provident.
+</h3>
+<h3 id="txt2">
+    Lorem ipsum dolor sit amet.
+</h3>
+<h4 class="author">
+    Lorem ipsum dolor.
+</h4>
+</body>
+</html>

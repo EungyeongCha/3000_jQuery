@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이벤트효과실습3</title>
+    <style>
+        button {
+            padding:10px;
+            background-color: palevioletred;
+            color: #fff;
+            border: none;
+            margin-bottom: 10px;
+            cursor: pointer;
+            outline: none;
+        }
+        img {
+            display: none;
+        }
+    </style>
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('button').eq(0).click(function(){
+                $('img').fadeIn();
+            });
+            $('button').eq(1).click(function(){
+                $('img').fadeOut();
+            });
+            $('button').eq(2).click(function(){
+                $('img').fadeToggle();
+            });
+        });
+    </script>
+</head>
+<body>
+    <button>fadeIn</button>
+    <button>fadeOut</button>
+    <button>fadeToggle</button>
+    <img src="images/1.jpg" alt="이미지1">
+</body>
+</html>

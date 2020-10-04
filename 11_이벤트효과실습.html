@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이벤트효과실습</title>
+    <style>
+        span {
+            cursor: pointer;
+            color: blue;
+        }
+        p {
+            display: none;
+        }
+    </style>
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('span').click(function(){
+                $('p').show();
+            });
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <h2>
+            1. 제목 <span>[열기]</span>
+        </h2>
+        <p>
+            내용
+        </p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>문서객체조작(동작)</title>
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            /*1. html()
+            : 선택자를 이용하여 찾아진 문서 객체의 첫번째 요소 문자열만 반환 = html태그인식*/
+//            var out = $('h3').html();
+//            alert('html()메서드', out);
+            /*2. text()
+            : 선택자를 이용하여 찾아진 문서 객체의 모든 문자열을 묶어서 반환 = html 태그인식 못함*/
+//            var out2 = $('h2').text();
+//            alert('out2');
+            
+            $('div').first().html('<p style="color: red">추가된 html</p>');
+            
+            $('div').eq(1).text('<p style="color: red">추가된 html</p>');
+        });
+    </script>
+</head>
+
+<body>
+    <h1>
+        Carpe Diem!!
+    </h1>
+    <h2>
+        현재를 즐겨라!!
+    </h2>
+    <h3>
+        나의 금기어
+    </h3>
+    <h3>
+        '언젠가', '아마도', '만약에'
+    </h3>
+    <h4>
+        Written by 파울로 코엘료
+    </h4>
+    <div></div>
+    <div></div>
+</body></html>

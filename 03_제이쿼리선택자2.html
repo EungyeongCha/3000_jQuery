@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.12.4.min.hs"></script>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.hs"></script>
+    <title>제이쿼리선택자2</title>
+    <script>
+        $(document).ready(function(){
+            /*1. 자식선택자*/
+            $("ul>li").css("color", "blue");
+            $("ul>li").css("list-style", "none");
+            $("ul").children().css("font-size", "24px");
+            /*2. 부모선택자*/
+            $("li").parent().css("font-weight", "bold");
+            /*3. 형제선택자*/
+            $("ul").siblings().css({"background-color": "purple", "font-size": "36px"});
+        });
+    </script>
+</head>
+<body>
+    <ul>
+        <li>First</li>
+        <li>Second</li>
+        <li>Third</li>
+    </ul>
+    <h3>
+        jQuery Selector!!
+    </h3>
+</body>
+</html>

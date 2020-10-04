@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="kor">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>기타이벤트정리</title>
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            /*1. 기본링크*/
+//            $('.btn1').on('click', function() {
+//                $('.txt1').css('color', 'red');
+//            });
+
+            /*1-1. 기본링크제거*/
+//            $('.btn1').on('click', function() {
+//                $('.txt1').css('color', 'red');
+//                // 기본링크제거
+//                return false;
+//            });
+            /*1-2. 기본링크제거*/
+            $('.btn2').on('click', function(e) {
+                e.preventDefault();
+                $('.txt2').css({'color': 'red', 'background-color': 'black'});
+                // 기본링크제거
+                return false;
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+    <p>
+        <a href="http://www.daum.net" class="btn1">버튼1</a>
+    </p>
+    <p class="txt1">
+        내용1
+    </p>
+    <p>
+        <a href="http://www.google.co.kr" class="btn2">버튼2</a>
+    </p>
+    <p class="txt2">
+        내용2
+    </p>
+    <p>
+        <button class="btn3">버튼3</button>
+    </p>
+    <p class="txt3">
+        내용3
+    </p>
+</body>
+
+</html>

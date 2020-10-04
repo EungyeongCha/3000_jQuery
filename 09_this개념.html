@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>this 개념</title>
+    <style>
+        .clickTest {
+            border: 1px solid #000;
+            background-color: yellowgreen;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+    </style>
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+//            /*1. 변수할당*/
+//            var element = $('.clickTest');
+//            /*2. 이벤트 연결*/
+//            element.on('click', function() {
+//                element.text('클릭되었습니다!');
+//            });
+//            $('#div1').on('click', function() {
+//                $('#div1').text('클릭되었습니다!');
+//            });
+//            $('#div2').on('click', function() {
+//                $('#div2').text('클릭되었습니다!');
+//            });
+//            $('#div3').on('click', function() {
+//                $('#div3').text('클릭되었습니다!');
+//            });
+//            $('#div4').on('click', function() {
+//                $('#div4').text('클릭되었습니다!');
+//            });
+//            $('#div5').on('click', function() {
+//                $('#div5').text('클릭되었습니다!');
+//            });
+            
+            /*위의 불편함을 해결한 방법이 this - DOM요소이다. $(this)this는 상황에 따라 들어있는 변수가 바뀌는 '특수한 변수'이다. 이벤트 리스너 안에서 this는 이벤트가 발생한 요소가 들어간다. 즉, '클릭한 요소'가 this에 할당된다.*/
+            
+            $('.clickTest').on('click', function(){
+                $(this).text('클릭되었습니다!');
+            });
+            
+//            $('h3').on('click', function(){
+//                $(this).css({'color':'red', 'background-color':'black'});
+//            });
+            
+        });
+    </script>
+</head>
+
+<body>
+    <div id="div1" class="clickTest">div!!</div>
+    <div id="div2" class="clickTest">div!!</div>
+    <div id="div3" class="clickTest">div!!</div>
+    <div id="div4" class="clickTest">div!!</div>
+    <div id="div5" class="clickTest">div!!</div>
+    
+    <h3>$(this) 실습</h3>
+</body></html>

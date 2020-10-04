@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="kor">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doument</title>
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            /*1. remove()
+            : 해당 노드 자체를 제거 = 매개변수는 없음 = 태그자체를 삭제*/
+            //            $('h3').first().remove();
+            //            $('h3').eq(0).first().remove();
+            //            $('h3:first').remove();
+
+            /*2. empty()
+            : 조건에 일치하는 요소들의 자식노드를 제거(텍스트노드도 삭제)*/
+            //            $('div').empty();
+
+            /*3. jQuery() = $()
+                a. 문서객체 선택 (예)$('문서객체선택')
+                b. 매개변수로 HTML요소의 문자열로 문서객체 생성 = 태그생성
+                    b-1. appendTo() : 매개변수의 맨 마지막 자식요소로 태그 생성 (예)$('태그').appendTo('body');*/
+            jQuery('<img src="images/1.jpg" width="300" height="300" alt="이미지1">').appendTo('body');
+        });
+    </script>
+</head>
+
+<body>
+    <div>
+        <h1>
+            Carpe Diem!!
+        </h1>
+        <h2>
+            현재를 즐겨라!!
+        </h2>
+    </div>
+    <h3>
+        나의 금기어
+    </h3>
+    <h3>
+        '언젠가', '아마도', '만약에'
+    </h3>
+    <h4>
+        Written by 파울로 코엘료
+    </h4>
+    <h5>ONE</h5>
+    <h5>TWO</h5>
+    <h6>THREE</h6>
+    <h6>FOUR</h6>
+</body></html>

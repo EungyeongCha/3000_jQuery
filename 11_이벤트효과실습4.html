@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이벤트효과실습4</title>
+    <style>
+        body {
+            background-color: green;
+        }
+
+        ul li {
+            padding: 10px;
+            border: 1px solid #000;
+            list-style: none;
+            width: 100px;
+            text-align: center;
+            display: inline-block;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .addColor {
+            background-color: darkgrey;
+            color: #fff;
+        }
+    </style>
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('li').on({
+                'mouseenter': function() {
+                    $(this).addClass('addColor')
+                },
+                'mouseleave': function() {
+                    $(this).removeClass('addColor');
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">MENU1</a></li>
+            <li><a href="#">MENU2</a></li>
+            <li><a href="#">MENU3</a></li>
+            <li><a href="#">MENU4</a></li>
+        </ul>
+    </nav>
+</body></html>

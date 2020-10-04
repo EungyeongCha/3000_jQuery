@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이벤트</title>
+    <style>
+        .inside {
+            background-color: green;
+            color: yellow;
+        }
+
+        h5,
+        button {
+            cursor: pointer;
+        }
+    </style>
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            /*1. one()이벤트 메서드 : 이벤트를 한번만 실행*/
+            //            $('h5').one('click', function(){
+            //                alert('버튼 클릭');
+            //                $('h5').addClass('inside');
+            //                $('<img>').attr({'src':'images/1.jpg', 'alt':'이미지1', 'width': 300, 'height': 300}).appendTo('body');
+            //            });
+
+            /*2. on() 이벤트 메서드 : 하나의 요소에 여러개 이벤트 연결*/
+            //            $('h5').on('click', function(){
+            //                alert('h5 경고창');
+            //            });
+            //            $('button').on('click', function(){
+            //                alert('버튼 경고창');
+            //            });
+
+            /*3. mouseenter() / mouseleave() : 빈공간 포함 박스 모두에 이벤트 적용*/
+//            $('h5')
+//                .on({
+//                    'mouseenter': function() {
+//                        $('h5').addClass('inside');
+//                    },
+//                    'mouseleave': function() {
+//                        $('h5').removeClass('inside');
+//                    }
+//                });
+            /*4. mouseover() / mouseout() : 해당 영역에만 이벤트 적용*/
+//            $('h5')
+//                .on({
+//                    'mouseover': function() {
+//                        $('h5').addClass('inside');
+//                    },
+//                    'mouseout': function() {
+//                        $('h5').removeClass('inside');
+//                    }
+//                });
+            
+            /*5. hover(): 선택한 요소에 마우스엔터/마우스리브될때 실행되는 메서드로 이벤트리스너(=이벤트핸들러)를 각각 지정함*/
+            $('h5').hover(function(){
+                $('h5').addClass('inside');
+                $('<img>').attr({'src':'images/1.jpg', 'alt':'이미지1', 'width': 300, 'height': 300}).appendTo('body');
+            }, function(){
+                $('h5').removeClass('inside');
+                $('img').remove();
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <h5>제이쿼리, 이벤트 사용방법</h5>
+    <h6></h6>
+    <button>버튼</button>
+</body></html>

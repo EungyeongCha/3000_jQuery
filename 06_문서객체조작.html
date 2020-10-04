@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>문서객체조작(동적)</title>
+    <style>
+        .change_01 {
+            color: blue;
+        }
+        .change_02 {
+            background-color: yellow;
+        }
+    </style>
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+           /*1. addClass() : 선택자로 선택한 문서 객체에 클래스를 추가*/ 
+//            $('h5').eq(0).css('color', 'red');
+            $('h5').eq(0).addClass('change_01');
+            $('h5').eq(1).addClass('change_02');
+            /*2. removeClass() : 선택자로 선택한 문서 객체에 클래스를 삭제*/
+            $('h5').eq(1).removeClass('change_02');
+            /*3. attr() : 문서 객체 속성값을 확인하거나 속성을 추가 
+                          단, 매개변수가 2개일 경우 값을 변경하는 것임(속성명:속성값)*/
+            $('img').attr('width', 300);
+            $('img').attr('height', 300);
+            $('img:last-child').attr({'width': 200, 'height': 200, 'alt': '사진1'});
+            
+        });
+    </script>
+</head>
+<body>
+    <h5>
+        변명 중에서도 가장 어리석고 못난 변명은
+    </h5>
+    <h5>
+        &quot;시간이 없어서&quot;하는 변명입니다.
+    </h5>
+    <h6>
+        By Edison
+    </h6>
+    <img src="images/1.jpg" alt="이미지1">
+    <img src="images/2.jpg" alt="이미지2">
+    <img src="images/3.jpg" alt="이미지3">
+</body>
+</html>

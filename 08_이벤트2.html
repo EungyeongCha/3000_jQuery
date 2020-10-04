@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>입력양식 선택자 이벤트</title>
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            /*입력양식 선택자 : type="*"속성*/
+            //            var out = $(':text').val();
+            //            document.write(out);
+
+            //            $(':text').focus();
+            //            $(':focus').css({'background': 'blue', 'color': '#fff', 'font-size': '20px'});
+
+            /*선언적 함수 사용, 이벤트 리스너와 연결*/
+            //            $(':button').on('click', chCss);
+            //            function chCss() {
+            //                $('h3').css({'color': 'red'});
+            //            }
+
+                        $(':button').on('click', chCss);
+                        function chCss() {
+                        $('h3').css('color', 'blue').text('바꾸는 문자열');
+                        }
+
+
+        });
+    </script>
+</head>
+
+<body>
+    <input type="text" value="텍스트박스">
+    <input type="button" value="클릭">
+    <h3>제이쿼리 이벤트</h3>
+</body></html>

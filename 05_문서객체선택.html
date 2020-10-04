@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="kor">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doument</title>
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            /*1. filter()
+            : 기본 선택자를 사용해도 되지만, 기본적으로 제공되지 않는 범위의 문서객체를 보다 편리하게 선택할때 사용*/
+            //            $('li').css('color', 'red');
+            //            $('li').filter(':even').css('color', 'red');
+            //            $('li').filter(':odd').css('color', 'blue');
+            
+            /*2. eq()
+            : 요소들의 인덱스번호를 이용하여 선택*/
+            $('li').eq(1).css('color', 'green');
+            $('li').eq(-1).css('color', 'red');
+
+
+            /*3. first() / last()
+            : 요소의 맨 처음과 맨 마지막을 선택*/
+            $('li').first().css('background-color', 'green');
+            $('li').last().css('background-color', 'yellow');
+            /*4. 위치 필터 선택자*/
+            $('tr:odd').css({
+                'background-color': 'blue',
+                'color': '#fff'
+            });
+            $('tr:even').css(
+                'background', 'green'
+            );
+            $('tr:first').css(
+                'background', 'red'
+            );
+            $('tr:last').css(
+                'background', 'silver'
+            );
+            
+            /*5. find()
+            : 선택자를 이용하여 찾아진 요소들의 후손문서객체를 선택할 수 있는 메서드*/
+            $('body').find('span').css('color', 'cyan');
+            $('h3').find('span').css('color', 'pink');
+            $('h4').find('span').css('background', 'purple');
+            $('h3, h4').find('span').css('background', 'black');
+            
+            /*6. is()
+            : 주어진 매개변수와 하나라도 일치하면 값을 리턴 = true/false */
+            var isChild = $('h3,h4').children().is('span');
+            if (isChild) {
+                alert('자식있음');
+            } else {
+                alert('자식없음');
+            }
+        });
+
+    </script>
+</head>
+
+<body>
+    <h2>문서객체 선택자1</h2>
+    <h3>문서객체 선택자2</h3>
+    <ul>
+        <li>ONE</li>
+        <li>TWO</li>
+        <li><small>THREE</small></li>
+        <li><small>FOUR</small></li>
+        <li>FIVE</li>
+    </ul>
+    <table>
+        <tr>
+            <td>내용1</td>
+            <td>내용2</td>
+        </tr>
+        <tr>
+            <td>내용1</td>
+            <td>내용2</td>
+        </tr>
+        <tr>
+            <td>내용1</td>
+            <td>내용2</td>
+        </tr>
+        <tr>
+            <td>내용1</td>
+            <td>내용2</td>
+        </tr>
+    </table>
+    <h3>
+        <span>find메서드 - FOUR</span>
+    </h3>
+    <h4>
+        <span>find메서드 - FIVE</span>
+    </h4>
+    <h5>
+        <span>
+            find메서드 - ONE
+        </span>
+    </h5>
+    <h5>
+        <span>
+            find메서드 - TWO
+        </span>
+    </h5>
+    <h6>
+        <span>
+            find메서드 - THREE
+        </span>
+    </h6>
+</body>
+
+</html>
